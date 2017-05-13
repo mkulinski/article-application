@@ -10,7 +10,7 @@ const Nav = () => {
       <ul>
         <li><IndexLink to="/">Home</IndexLink></li>
         <li><Link to="/articles">Articles</Link></li>
-        <li><Link to="/about">About</Link></li>
+        <li><Link to="/topics">Topics</Link></li>
       </ul>
     </nav>
   );
