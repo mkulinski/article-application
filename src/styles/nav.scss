@@ -1,0 +1,55 @@
+@import './variables';
+
+
+.nav {
+  ul {
+    list-style: none;
+    background-color: $medium-grey;
+    font-size: 12px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    font-family: 'Oswald', sans-serif;
+    line-height: 20px;
+    height: 20px;
+    border-bottom: 1px solid $light-grey;
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
+    display: block;
+    transition: .3s background-color;
+  }
+
+  a:hover {
+    background-color: $light-blue;
+  }
+}
+
+@media screen and (min-width: 735px) {
+   .nav {
+     background-color: $medium-grey;
+
+     ul {
+       display: flex;
+       justify-content: flex-end;
+       flex-flow: row nowrap;
+
+       li:first-child {
+         margin-right:auto;
+       }
+     }
+
+     li {
+       width: 120px;
+       border-bottom: none;
+       height: 50px;
+       line-height: 50px;
+       font-size: 1.4em;
+     }
+   }
+}
