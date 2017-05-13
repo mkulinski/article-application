@@ -4,7 +4,7 @@
 .nav {
   ul {
     list-style: none;
-    background-color: $medium-grey;
+    background-color: $white;
     font-size: 12px;
     text-align: center;
     padding: 0;
@@ -15,41 +15,41 @@
     font-family: 'Oswald', sans-serif;
     line-height: 20px;
     height: 20px;
-    border-bottom: 1px solid $light-grey;
   }
 
   a {
     text-decoration: none;
-    color: $white;
+    color: $red;
     display: block;
     transition: .3s background-color;
   }
 
   a:hover {
-    background-color: $light-blue;
+    background-color: $red;
+    color: $white;
   }
 }
 
 @media screen and (min-width: 735px) {
-   .nav {
-     background-color: $medium-grey;
+  .nav {
+    border-bottom: 1px solid $light-grey;
 
-     ul {
-       display: flex;
-       justify-content: flex-end;
-       flex-flow: row nowrap;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      flex-flow: row nowrap;
 
-       li:first-child {
-         margin-right:auto;
-       }
-     }
+      li:first-child {
+        margin-right:auto;
+      }
+    }
 
-     li {
-       width: 120px;
-       border-bottom: none;
-       height: 50px;
-       line-height: 50px;
-       font-size: 1.4em;
-     }
-   }
+    li {
+      width: 120px;
+      border-bottom: none;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.4em;
+    }
+  }
 }

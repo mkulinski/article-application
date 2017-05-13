@@ -13,14 +13,14 @@ button {
   line-height: 1px;
   font-weight: 800;
   text-align: center;
-  background: $light-blue;
+  background: $red;
   border: none;
   padding: 15px 30px;
 
   &:hover {
     cursor: pointer;
-    border: 1px solid $light-blue;
-    color: $light-blue;
+    border: 1px solid $red;
+    color: $red;
     background-color: $white;
   }
 }
