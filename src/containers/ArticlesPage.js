@@ -15,18 +15,22 @@ class ArticlesPage extends Component {
   }
 
   createArticles = () => {
-    return this.props.articles.allArticles.map((article, index) => (
-      <Article
-        {...article}
-        key={index}
-      />
-    ));
+    return this.props.articles.allArticles
+      .filter(article => {
+        const topicIds = article.topics.map(topic => topic.id);
+        return topicIds.every(id => this.props.topicsUnFollowed.indexOf(id) === -1);
+      })
+      .map((article, index) => (
+        <Article
+          {...article}
+          key={index}
+        />
+      ));
   }
 
   render() {
     const loading = this.props.articles.isFetching ? <Loading /> : null;
     const articles = this.createArticles();
-    // console.log('this.props ', this.props);
     return (
       <div className="component-container">
         <h1>ArticlesPage</h1>
@@ -39,12 +43,14 @@ class ArticlesPage extends Component {
 
 ArticlesPage.propTypes = {
   articles: PropTypes.object.isRequired,
+  topicsUnFollowed: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
   return {
-    articles: state.articles
+    articles: state.articles,
+    topicsUnFollowed: state.topics.topicsUnFollowed,
   };
 }
 
