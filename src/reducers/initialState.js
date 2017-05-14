@@ -8,5 +8,6 @@ export default {
     isFetching: false,
     error: false,
     allTopics: [],
+    topicsUnFollowed: [],
   },
 };

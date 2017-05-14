@@ -18,6 +18,8 @@ class TopicsPage extends Component {
     return this.props.topics.allTopics.map((topic, index) => (
       <Topic
         {...topic}
+        onClick={this.props.actions.unFollowTopic}
+        index={index}
         key={index}
       />
     ));
