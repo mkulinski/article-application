@@ -1,0 +1,19 @@
+@import './variables';
+
+.follow-container {
+  height: 37px;
+  padding: 0 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid $red;
+  color: $red;
+  background-color: transparent;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+
+.button-active {
+  background-color: $red;
+  color: $white;
+}

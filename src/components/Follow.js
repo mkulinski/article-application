@@ -1,18 +1,16 @@
 import React, { PropTypes } from 'react';
-import check from "../img/follow.svg";
-import x from "../img/unfollow.svg";
 
 import '../styles/follow.scss';
 
 
 const Follow = ({ follow }) => {
-  const followIcon = follow ? check : x;
-  const followText = follow ? 'Following' : 'Not Following';
+  const followText = follow ? 'Following' : 'Follow';
+  const isActive = follow ? 'button-active' : null;
+  const className = `follow-container ${isActive}`
   return (
-    <div className="followContainer">
-      <img src={followIcon} alt="follow/unfollow icon" />
-      <span>{followText}</span>
-    </div>
+    <button className={className}>
+      {followText}
+    </button>
   );
 };
 
