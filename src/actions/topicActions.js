@@ -38,5 +38,5 @@ export function unFollowTopic(id) {
   return {
     type: types.UNFOLLOW_TOPIC,
     payload: { id },
-  }
+  };
 }

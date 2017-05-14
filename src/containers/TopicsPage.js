@@ -15,20 +15,23 @@ class TopicsPage extends Component {
   }
 
   createTopics = () => {
-    return this.props.topics.allTopics.map((topic, index) => (
-      <Topic
-        {...topic}
-        onClick={this.props.actions.unFollowTopic}
-        index={index}
-        key={index}
-      />
-    ));
+    return this.props.topics.allTopics.map((topic, index) => {
+      const follow = this.props.topics.topicsUnFollowed.indexOf(topic.id) === -1;
+      return (
+        <Topic
+          {...topic}
+          follow={follow}
+          onClick={this.props.actions.unFollowTopic}
+          index={index}
+          key={index}
+        />
+      );
+    });
   }
 
   render() {
     const loading = this.props.topics.isFetching ? <Loading /> : null;
     const topics = this.createTopics();
-    console.log('this.props ', this.props);
     return (
       <div className="component-container">
         <h1>TopicsPage</h1>
