@@ -34,7 +34,7 @@ class TopicsPage extends Component {
     const topics = this.createTopics();
     return (
       <div className="component-container">
-        <h1>TopicsPage</h1>
+        <h1>Topics</h1>
         {loading}
         {topics}
       </div>

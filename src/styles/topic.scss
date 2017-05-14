@@ -1,0 +1,14 @@
+@import './variables';
+
+
+.topic-container {
+  display: flex;
+  flex-flow: row;
+  width: 650px;
+  height: 150px;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 3px;
+  border: 1px solid $gray;
+  background-color: $white;
+}

@@ -6,11 +6,13 @@ import '../styles/follow.scss';
 const Follow = ({ follow }) => {
   const followText = follow ? 'Following' : 'Follow';
   const isActive = follow ? 'button-active' : null;
-  const className = `follow-container ${isActive}`
+  const className = `follow-button ${isActive}`
   return (
-    <button className={className}>
-      {followText}
-    </button>
+    <div className="follow-container">
+      <button className={className}>
+        {followText}
+      </button>
+    </div>
   );
 };
 

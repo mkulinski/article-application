@@ -1,6 +1,11 @@
 @import './variables';
 
+
 .follow-container {
+  width: 130px;
+}
+
+.follow-button {
   height: 37px;
   padding: 0 16px;
   text-align: center;
@@ -9,8 +14,6 @@
   border: 1px solid $red;
   color: $red;
   background-color: transparent;
-  vertical-align: bottom;
-  white-space: nowrap;
 }
 
 .button-active {

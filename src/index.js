@@ -9,7 +9,7 @@ import configureStore from './store/configureStore';
 
 require('./favicon.ico');
 
-import './styles/styles.scss';
+import './styles/global-styles.scss';
 
 const store = configureStore();
 

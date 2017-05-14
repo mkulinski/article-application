@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Follow from './Follow';
+import Text from './Text';
 
 import '../styles/topic.scss';
 
@@ -11,7 +12,7 @@ class Topic extends Component {
   render() {
     return (
       <div className="topic-container" onClick={this.handleOnClick}>
-        <p>{this.props.name}</p>
+        <Text value={this.props.name} className="topic-text" />
         <Follow follow={this.props.follow} />
       </div>
     );
