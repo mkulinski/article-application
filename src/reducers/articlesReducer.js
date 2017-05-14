@@ -20,7 +20,7 @@ export default function articlesReducer(state = initialState.articles, action) {
 
     case LOAD_ARTICLES: {
       console.log('load fired');
-      const allArticles = action.payload.allArticles;
+      const allArticles = action.payload.allArticles.data;
       return {
         ...state,
         isFetching: false,
