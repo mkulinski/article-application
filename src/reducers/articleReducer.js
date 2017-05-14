@@ -2,15 +2,14 @@ import {
   REQUEST_ARTICLES,
   LOAD_ARTICLES,
   ERROR_LOADING_ARTICLES,
-} from '../constants/actionTypes';
+} from '../constants/articleActionTypes';
 import initialState from './initialState';
 
 
-export default function articlesReducer(state = initialState.articles, action) {
+export default function articleReducer(state = initialState.articles, action) {
 
   switch (action.type) {
     case REQUEST_ARTICLES: {
-      console.log('request fired');
       return {
         ...state,
         error: false,
@@ -19,7 +18,6 @@ export default function articlesReducer(state = initialState.articles, action) {
     }
 
     case LOAD_ARTICLES: {
-      console.log('load fired');
       const allArticles = action.payload.allArticles.data;
       return {
         ...state,
@@ -30,7 +28,6 @@ export default function articlesReducer(state = initialState.articles, action) {
     }
 
     case ERROR_LOADING_ARTICLES: {
-      console.log('error fired');
       return {
         ...state,
         isFetching: false,

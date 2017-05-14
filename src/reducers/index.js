@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
-import articlesReducer from './articlesReducer';
+import articleReducer from './articleReducer';
+import topicReducer from './topicReducer';
 import { routerReducer } from 'react-router-redux';
 
 const rootReducer = combineReducers({
-  articles: articlesReducer,
+  articles: articleReducer,
+  topics: topicReducer,
   routing: routerReducer
 });
 

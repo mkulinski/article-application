@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as actions from '../actions/actionCreators';
+import * as actions from '../actions/articleActions';
 
 import Loading from '../components/Loading';
 import Article from '../components/Article';
@@ -26,8 +26,7 @@ class ArticlesPage extends Component {
   render() {
     const loading = this.props.articles.isFetching ? <Loading /> : null;
     const articles = this.createArticles();
-    console.log('articles ', articles);
-    console.log('this.props ', this.props);
+    // console.log('this.props ', this.props);
     return (
       <div className="component-container">
         <h1>ArticlesPage</h1>
