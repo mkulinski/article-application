@@ -1,13 +1,41 @@
-import { LOAD_ARTICLES } from '../constants/actionTypes';
+import {
+  REQUEST_ARTICLES,
+  LOAD_ARTICLES,
+  ERROR_LOADING_ARTICLES,
+} from '../constants/actionTypes';
 import initialState from './initialState';
 
 
 export default function articlesReducer(state = initialState.articles, action) {
 
   switch (action.type) {
+    case REQUEST_ARTICLES: {
+      console.log('request fired');
+      return {
+        ...state,
+        error: false,
+        isFetching: true,
+      };
+    }
+
     case LOAD_ARTICLES: {
-      const articles = action.payload.articles
-      return Object.assign({}, state, { articles });
+      console.log('load fired');
+      const allArticles = action.payload.allArticles;
+      return {
+        ...state,
+        isFetching: false,
+        error: false,
+        allArticles,
+      };
+    }
+
+    case ERROR_LOADING_ARTICLES: {
+      console.log('error fired');
+      return {
+        ...state,
+        isFetching: false,
+        error: true,
+      };
     }
 
     default:

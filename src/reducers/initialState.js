@@ -1,10 +1,12 @@
 export default {
   articles: {
     isFetching: false,
-    articles: [],
+    error: false,
+    allArticles: [],
   },
   topics: {
     isFetching: false,
-    topics: [],
+    error: false,
+    allTopics: [],
   },
 };
