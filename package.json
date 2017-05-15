@@ -1,7 +1,7 @@
 {
-  "name": "cat-gifs",
+  "name": "article-application",
   "version": "1.0.0",
-  "description": "get all the cat gifs",
+  "description": "Get a list of articles according to the topics you follow",
   "engines": {
     "npm": ">=3"
   },

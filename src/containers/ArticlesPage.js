@@ -33,7 +33,7 @@ class ArticlesPage extends Component {
     const articles = this.createArticles();
     return (
       <div className="component-container">
-        <h1>Articles</h1>
+        <h1>MedCircle</h1>
         {loading}
         {articles}
       </div>

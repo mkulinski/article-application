@@ -6,6 +6,7 @@ import '../styles/article.scss';
 
 
 const Article = ({ title, summary, createdAt, likesCount, url, attribution }) => {
+  const date = new Date(createdAt).toDateString();
   return (
     <div className="article-container">
       <div className="article-header">
@@ -13,7 +14,7 @@ const Article = ({ title, summary, createdAt, likesCount, url, attribution }) =>
         <Likes className="article-likes-container" likesCount={likesCount} />
       </div>
       <Text value={attribution.displayName} className="article-display-name" />
-      <p>{createdAt}</p>
+      <Text value={date} className="article-date" />
       <Text value={summary} className="article-summary" />
     </div>
   );
