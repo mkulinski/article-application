@@ -1,0 +1,45 @@
+@import './variables';
+
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 3px;
+  border: 1px solid $gray;
+  background-color: $white;
+}
+
+.article-header {
+  display: flex;
+}
+
+.article-title {
+  max-width: 530px;
+  font-size: 18px;
+  font-weight: 600;
+  color: $red;
+}
+
+.article-summary {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.article-date {
+  font-size: 14px;
+}
+
+.article-likes-container {
+  margin-left: auto;
+  display: flex;
+  width: 70px;
+  font-size: 18px;
+}
+
+.article-display-name {
+  font-size: 12px;
+  font-weight: 500;
+}

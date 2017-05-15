@@ -1,4 +1,6 @@
 import React, { PropTypes } from 'react';
+import Text from './Text';
+import Likes from './Likes';
 
 import '../styles/article.scss';
 
@@ -6,12 +8,13 @@ import '../styles/article.scss';
 const Article = ({ title, summary, createdAt, likesCount, url, attribution }) => {
   return (
     <div className="article-container">
-      <p>{title}</p>
-      <p>{summary}</p>
+      <div className="article-header">
+        <a href={url} className="article-title">{title}</a>
+        <Likes className="article-likes-container" likesCount={likesCount} />
+      </div>
+      <Text value={attribution.displayName} className="article-display-name" />
       <p>{createdAt}</p>
-      <p>{likesCount}</p>
-      <p>{attribution.displayName}</p>
-      <p>{url}</p>
+      <Text value={summary} className="article-summary" />
     </div>
   );
 };
