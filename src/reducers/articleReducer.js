@@ -1,15 +1,10 @@
-import {
-  REQUEST_ARTICLES,
-  LOAD_ARTICLES,
-  ERROR_LOADING_ARTICLES,
-} from '../constants/articleActionTypes';
+import * as types from '../constants/articleActionTypes';
 import initialState from './initialState';
 
 
 export default function articleReducer(state = initialState.articles, action) {
-
   switch (action.type) {
-    case REQUEST_ARTICLES: {
+    case types.REQUEST_ARTICLES: {
       return {
         ...state,
         error: false,
@@ -17,7 +12,7 @@ export default function articleReducer(state = initialState.articles, action) {
       };
     }
 
-    case LOAD_ARTICLES: {
+    case types.LOAD_ARTICLES: {
       const allArticles = action.payload.allArticles.data;
       return {
         ...state,
@@ -27,7 +22,7 @@ export default function articleReducer(state = initialState.articles, action) {
       };
     }
 
-    case ERROR_LOADING_ARTICLES: {
+    case types.ERROR_LOADING_ARTICLES: {
       return {
         ...state,
         isFetching: false,
