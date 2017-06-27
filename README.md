@@ -1,4 +1,4 @@
-# Article Feed
+# Article Filtering Feed
 
 ## Get Started
 
